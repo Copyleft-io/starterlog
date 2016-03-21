@@ -15,7 +15,7 @@
     "angular-ui-router": "~0.2.14",
     "bootstrap": "^3.3.5",
     "bootstrap-tagsinput": "^0.7.1",
-    "firebase": "~2.2.7",
+    "firebase": "~2.4.0",
     "fontawesome": "~4.3.0",
     "datatables": "~1.10.7",
     "jquery": "~2.1.4",

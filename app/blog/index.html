@@ -2,18 +2,26 @@
 
 <br/>
 <button ng-click="tablePosts.filter({})" class="btn btn-sm pull-right" style="padding:10px;">Clear Filter</button>
+
     <table ng-table="tablePosts" class="table table-striped table-bordered" show-filter="true">
 
         <tr ng-repeat="post in $data">
-
-            <td data-title="'Title'" class="align-left" filter="{ 'title': 'text' }">
+            <td data-title="'Subject'" class="align-left" filter="{ 'title': 'text' }">
                 {{post.title}}
             </td>
             <td data-title="'Author'" class="align-left" filter="{ 'author': 'text' }">
                 {{post.author}}
             </td>
             <td data-title="'Tags'" class="align-left" filter="{ 'tags': 'text' }">
-              {{post.tags}}
+            {{tagsArrayToString(post.tags)}}
+            <!--<span ng-bind="tagsArrayToString({{post.tags}})"></span>-->
+              <!--{{post.tags}}-->
+              <!--<a ng-repeat="tag in post.tags">
+                {{tag.text}}
+              </a>-->
+              <!--<tags-input ng-model="post.tags" add-on-paste="true">
+                <auto-complete source="loadTags()"></auto-complete>
+              </tags-input>-->
             </td>
             <td data-title="'Status'" class="align-left" filter="{ 'status': 'text' }">
                 {{post.status}}
